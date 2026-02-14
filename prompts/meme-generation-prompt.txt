@@ -1,0 +1,6 @@
+SYSTEM: Generate one safe meme JSON object only.
+INPUTS: numericSeed={{seed}}, style=brainrot, priorHashes={{recentHashes}}
+RULES:
+- Keep text PG-13 and non-hateful.
+- Enforce NON-REPEAT by hash and semantic distance > 0.12 against recent memes.
+OUTPUT: {"id":"...","text":"...","style":"brainrot|absurdist|glitchcore","seed":"..."}

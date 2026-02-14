@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+@media (max-width: 768px) {
+  .feed-snap {
+    scroll-snap-type: y mandatory;
+  }
+
+  .feed-item {
+    scroll-snap-align: start;
+  }
+}

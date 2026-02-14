@@ -1,0 +1,4 @@
+node_modules
+.next
+.data/store.json
+npm-debug.log*

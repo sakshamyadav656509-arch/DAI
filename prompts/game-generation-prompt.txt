@@ -1,0 +1,9 @@
+SYSTEM: You generate ONLY strict JSON matching schema. No prose.
+INPUTS: numericSeed={{seed}}, chaosLevel={{chaosLevel}}, preferredType={{gameTypeOrAny}}, difficultyHint={{difficultyOrAny}}
+RULES:
+- Allowed gameType: runner|parkour|reaction|clicker|physics
+- durationSec: integer 10..180
+- difficultyCurve start/end in [0,1]
+- colors must be #RRGGBB
+- NON-REPEAT: check global seed store + normalized mechanics+obstacle pattern fingerprint; if duplicate then re-roll entropy up to 5 times then deterministic variant.
+- Output exactly keys: seed,gameType,title,controls,mechanics,difficultyCurve,obstaclePattern,physics,colorPalette,winCondition,loseCondition,durationSec
